@@ -1,39 +1,40 @@
-jobInfo.Message_Type =¿ØÖÆÂë
+jobInfo.Message_Type =æ§åˆ¶ç 
 
-ControlCodeMap.put("$.0x4321", ControlAction.ShutDown);//¹Ø»ú ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x6575", ControlAction.Roboot);//ÖØÆô ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x4571", ControlAction.RelaunchApp);//ÖØÆôApp ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x9456", ControlAction.EXITApp);//¹Ø±ÕApp ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x5457", ControlAction.UpdateAndSilentinstallAndGetRootPermissions);//Ç¿ÖÆ¸üĞÂ²¢¾²Ä¬°²×°²¢»ñµÃÏµÍ³È¨ÏŞ ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x6887", ControlAction.SetFlashlightStatus);//ÉèÖÃÉÁ¹âµÆ×´Ì¬ bool²ÎÊı ¸ñÊ½£ºtrue
-ControlCodeMap.put("$.0x6974", ControlAction.SetShock);//ÉèÖÃÕğ¶¯ int²ÎÊı ¸ñÊ½£º300
-ControlCodeMap.put("$.0x2177", ControlAction.ScreenShotAndUpdate);//½ØÍ¼²¢ÉÏ´« ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x3858", ControlAction.ShowAlert);//µ¯³öÏûÏ¢ string²ÎÊı ¸ñÊ½£ºÌìÆø·ç´ó,×¢Òâ×öºÃ·ÀÁï!
-ControlCodeMap.put("$.0x1459", ControlAction.SetGPSStatus);//ÉèÖÃGPS×´Ì¬ bool²ÎÊı ¸ñÊ½£ºtrue
-ControlCodeMap.put("$.0x9670", ControlAction.SetMonitorStatus);//ÉèÖÃÊÓÆµ¼à¿Ø×´Ì¬ bool²ÎÊı ¸ñÊ½£ºtrue
-ControlCodeMap.put("$.0x2411", ControlAction.SetMonopolyStatus);//ÉèÖÃ¶ÀÕ¼×´Ì¬ bool²ÎÊı ¸ñÊ½£ºtrue
-ControlCodeMap.put("$.0x2572", ControlAction.RunCommand);//ÔËĞĞÃüÁî string²ÎÊı ¸ñÊ½£ºadb install [-r] [-s]
-ControlCodeMap.put("$.0x1783", ControlAction.UpdatePDAInfo);//ÉÏ´«×´Ì¬ ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x9454", ControlAction.SendSms);//·¢ËÍ¶ÌĞÅ sting²ÎÊı ¸ñÊ½£º18947223628|²âÊÔ¶ÌĞÅÄÚÈİ
-ControlCodeMap.put("$.0x1485", ControlAction.SimulateClick);//Ä£Äâ´¥ÆÁ sting²ÎÊı ¸ñÊ½£º21|45
-ControlCodeMap.put("$.0x6876", ControlAction.UpdateGPSAndSpeedInfo);//ÉÏ´«GPSÓëËÙ¶È×´Ì¬ ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x1457", ControlAction.UpdateElectricQuantityInfo);//ÉÏ´«µçÁ¿×´Ì¬ ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x1478", ControlAction.SetSystem_Info);// ¸üĞÂÏµÍ³ĞÅÏ¢ ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0x6325", ControlAction.UpdatePlanList);// ¸üĞÂ¼Æ»®ÁĞ±í ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0xb974", ControlAction.SendMessageResult);// ¸ø·şÎñÆ÷·¢ËÍÏûÏ¢Ö®ºóµÄ·µ»ØÊ± ÎŞ²ÎÊı ¸ñÊ½£ºnull
-ControlCodeMap.put("$.0xc92a", ControlAction.UpdateMaxPlanListID);// ¸üĞÂ×îĞÂ¼Æ»®ID ÎŞ²ÎÊı ¸ñÊ½£ºnull
+ControlCodeMap.put("$.0x4321", ControlAction.ShutDown);//å…³æœº æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x6575", ControlAction.Roboot);//é‡å¯ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x4571", ControlAction.RelaunchApp);//é‡å¯App æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x9456", ControlAction.EXITApp);//å…³é—­App æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x5457", ControlAction.UpdateAndSilentinstallAndGetRootPermissions);//å¼ºåˆ¶æ›´æ–°å¹¶é™é»˜å®‰è£…å¹¶è·å¾—ç³»ç»Ÿæƒé™ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x6887", ControlAction.SetFlashlightStatus);//è®¾ç½®é—ªå…‰ç¯çŠ¶æ€ boolå‚æ•° æ ¼å¼ï¼štrue
+ControlCodeMap.put("$.0x6974", ControlAction.SetShock);//è®¾ç½®éœ‡åŠ¨ intå‚æ•° æ ¼å¼ï¼š300
+ControlCodeMap.put("$.0x2177", ControlAction.ScreenShotAndUpdate);//æˆªå›¾å¹¶ä¸Šä¼  æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x3858", ControlAction.ShowAlert);//å¼¹å‡ºæ¶ˆæ¯ stringå‚æ•° æ ¼å¼ï¼šå¤©æ°”é£å¤§,æ³¨æ„åšå¥½é˜²æºœ!
+ControlCodeMap.put("$.0x1459", ControlAction.SetGPSStatus);//è®¾ç½®GPSçŠ¶æ€ boolå‚æ•° æ ¼å¼ï¼štrue
+ControlCodeMap.put("$.0x9670", ControlAction.SetMonitorStatus);//è®¾ç½®è§†é¢‘ç›‘æ§çŠ¶æ€ boolå‚æ•° æ ¼å¼ï¼štrue
+ControlCodeMap.put("$.0x2411", ControlAction.SetMonopolyStatus);//è®¾ç½®ç‹¬å çŠ¶æ€ boolå‚æ•° æ ¼å¼ï¼štrue
+ControlCodeMap.put("$.0x2572", ControlAction.RunCommand);//è¿è¡Œå‘½ä»¤ stringå‚æ•° æ ¼å¼ï¼šadb install [-r] [-s]
+ControlCodeMap.put("$.0x1783", ControlAction.UpdatePDAInfo);//ä¸Šä¼ çŠ¶æ€ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x9454", ControlAction.SendSms);//å‘é€çŸ­ä¿¡ stingå‚æ•° æ ¼å¼ï¼š18947223628|æµ‹è¯•çŸ­ä¿¡å†…å®¹
+ControlCodeMap.put("$.0x1485", ControlAction.SimulateClick);//æ¨¡æ‹Ÿè§¦å± stingå‚æ•° æ ¼å¼ï¼š21|45
+ControlCodeMap.put("$.0x6876", ControlAction.UpdateGPSAndSpeedInfo);//ä¸Šä¼ GPSä¸é€Ÿåº¦çŠ¶æ€ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x1457", ControlAction.UpdateElectricQuantityInfo);//ä¸Šä¼ ç”µé‡çŠ¶æ€ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x1478", ControlAction.SetSystem_Info);// æ›´æ–°ç³»ç»Ÿä¿¡æ¯ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x6325", ControlAction.UpdatePlanList);// æ›´æ–°è®¡åˆ’åˆ—è¡¨ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0xb974", ControlAction.SendMessageResult);// ç»™æœåŠ¡å™¨å‘é€æ¶ˆæ¯ä¹‹åçš„è¿”å›æ—¶ æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0xc92a", ControlAction.UpdateMaxPlanListID);// æ›´æ–°æœ€æ–°è®¡åˆ’ID æ— å‚æ•° æ ¼å¼ï¼šnull
+ControlCodeMap.put("$.0x62ab", ControlAction.NewPlanExpression);// æ–°è®¡åˆ’çš„è®¾å¤‡è¡¨ç° æ— å‚æ•° æ ¼å¼ï¼šnull
 
-·şÎñÆ÷·¢ËÍÏûÏ¢¸ñÊ½
-[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'ÏûÏ¢ÄÚÈİ','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
+æœåŠ¡å™¨å‘é€æ¶ˆæ¯æ ¼å¼
+[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'æ¶ˆæ¯å†…å®¹','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
 
 
-¿Í»§¶Ë·¢ËÍÏûÏ¢¸ñÊ½
-#.0x1465 ·¢ËÍPDA»ù±¾ĞÅÏ¢
-#.0x7845 ·¢ËÍPDA_µçÁ¿ĞÅÏ¢ 
-#.0x4156 ·¢ËÍPDA_GPSĞÅÏ¢
-#.0x8231 ·¢ËÍ¿Í»§¶Ë»ñÈ¡µ½µÄ×î´ó¼Æ»®ID
-#.0xc5b1 ·¢ËÍMESSAGE_RunÖ´ĞĞ½á¹û   ¸ñÊ½£º MessageId|Message_Content
-#.0xb874 ·¢ËÍbyteÑ¹ËõºóµÄstringÎÄ¼ş
+å®¢æˆ·ç«¯å‘é€æ¶ˆæ¯æ ¼å¼
+#.0x1465 å‘é€PDAåŸºæœ¬ä¿¡æ¯
+#.0x7845 å‘é€PDA_ç”µé‡ä¿¡æ¯ 
+#.0x4156 å‘é€PDA_GPSä¿¡æ¯
+#.0x8231 å‘é€å®¢æˆ·ç«¯è·å–åˆ°çš„æœ€å¤§è®¡åˆ’ID
+#.0xc5b1 å‘é€MESSAGE_Runæ‰§è¡Œç»“æœ   æ ¼å¼ï¼š MessageId|Message_Content
+#.0xb874 å‘é€byteå‹ç¼©åçš„stringæ–‡ä»¶
 
 
 
