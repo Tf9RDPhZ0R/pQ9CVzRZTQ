@@ -1,0 +1,43 @@
+jobInfo.Message_Type =控制码
+
+ControlCodeMap.put("$.0x4321", ControlAction.ShutDown);//关机 无参数 格式：null
+ControlCodeMap.put("$.0x6575", ControlAction.Roboot);//重启 无参数 格式：null
+ControlCodeMap.put("$.0x4571", ControlAction.RelaunchApp);//重启App 无参数 格式：null
+ControlCodeMap.put("$.0x9456", ControlAction.EXITApp);//关闭App 无参数 格式：null
+ControlCodeMap.put("$.0x5457", ControlAction.UpdateAndSilentinstallAndGetRootPermissions);//强制更新并静默安装并获得系统权限 无参数 格式：null
+ControlCodeMap.put("$.0x6887", ControlAction.SetFlashlightStatus);//设置闪光灯状态 bool参数 格式：true
+ControlCodeMap.put("$.0x6974", ControlAction.SetShock);//设置震动 int参数 格式：300
+ControlCodeMap.put("$.0x2177", ControlAction.ScreenShotAndUpdate);//截图并上传 无参数 格式：null
+ControlCodeMap.put("$.0x3858", ControlAction.ShowAlert);//弹出消息 string参数 格式：天气风大,注意做好防溜!
+ControlCodeMap.put("$.0x1459", ControlAction.SetGPSStatus);//设置GPS状态 bool参数 格式：true
+ControlCodeMap.put("$.0x9670", ControlAction.SetMonitorStatus);//设置视频监控状态 bool参数 格式：true
+ControlCodeMap.put("$.0x2411", ControlAction.SetMonopolyStatus);//设置独占状态 bool参数 格式：true
+ControlCodeMap.put("$.0x2572", ControlAction.RunCommand);//运行命令 string参数 格式：adb install [-r] [-s]
+ControlCodeMap.put("$.0x1783", ControlAction.UpdatePDAInfo);//上传状态 无参数 格式：null
+ControlCodeMap.put("$.0x9454", ControlAction.SendSms);//发送短信 sting参数 格式：18947223628|测试短信内容
+ControlCodeMap.put("$.0x1485", ControlAction.SimulateClick);//模拟触屏 sting参数 格式：21|45
+ControlCodeMap.put("$.0x6876", ControlAction.UpdateGPSAndSpeedInfo);//上传GPS与速度状态 无参数 格式：null
+ControlCodeMap.put("$.0x1457", ControlAction.UpdateElectricQuantityInfo);//上传电量状态 无参数 格式：null
+ControlCodeMap.put("$.0x1478", ControlAction.SetSystem_Info);// 更新系统信息 无参数 格式：null
+ControlCodeMap.put("$.0x6325", ControlAction.UpdatePlanList);// 更新计划列表 无参数 格式：null
+ControlCodeMap.put("$.0xb974", ControlAction.SendMessageResult);// 给服务器发送消息之后的返回时 无参数 格式：null
+ControlCodeMap.put("$.0xc92a", ControlAction.UpdateMaxPlanListID);// 更新最新计划ID 无参数 格式：null
+
+服务器发送消息格式
+[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'消息内容','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
+
+
+客户端发送消息格式
+#.0x1465 发送PDA基本信息
+#.0x7845 发送PDA_电量信息 
+#.0x4156 发送PDA_GPS信息
+#.0x8231 发送客户端获取到的最大计划ID
+#.0xc5b1 发送MESSAGE_Run执行结果   格式： MessageId|Message_Content
+#.0xb874 发送byte压缩后的string文件
+
+
+
+ 
+
+
+ 
