@@ -35,6 +35,7 @@ ControlCodeMap.put("$.0x62ab", ControlAction.NewPlanExpression);// 新计划的�
 #.0x8231 发送客户端获取到的最大计划ID
 #.0xc5b1 发送MESSAGE_Run执行结果   格式： MessageId|Message_Content
 #.0xb874 发送byte压缩后的string文件
+#.0x9108 根据计划单号回调计划确认接收时间  Message_Content格式：SpListId|ConfirmReceiptOperatorName
 
 
 
