@@ -1,5 +1,24 @@
-jobInfo.Message_Type =控制码
+服务器向客户端发送消息格式
+[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'消息内容','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
 
+C# 调用实例
+JsonSystemInfo="消息内容，根据具体调用可以是字符串或者JSON"
+//创建数组
+MessageModel[] MessageModelArray = new MessageModel[1];
+//MessageModel，并赋值给数组的每一个元素            
+MessageModelArray[0] = new MessageModel()
+{
+	Message_Receiver_Sn = Pda.PdaSn,
+	Message_Content = JsonSystemInfo,
+	Message_Type = "$.0x1478",
+	Message_Send_Time = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss")
+};
+
+var jsondata = JsonConvert.SerializeObject(MessageModelArray);
+await SignalR_Server_Method_PushMessage(jsondata);
+
+
+Message_Type（控制码）说明：
 ControlCodeMap.put("$.0x4321", ControlAction.ShutDown);//关机 无参数 格式：null
 ControlCodeMap.put("$.0x6575", ControlAction.Roboot);//重启 无参数 格式：null
 ControlCodeMap.put("$.0x4571", ControlAction.RelaunchApp);//重启App 无参数 格式：null
@@ -20,26 +39,24 @@ ControlCodeMap.put("$.0x6876", ControlAction.UpdateGPSAndSpeedInfo);//上传GPS�
 ControlCodeMap.put("$.0x1457", ControlAction.UpdateElectricQuantityInfo);//上传电量状态 无参数 格式：null
 ControlCodeMap.put("$.0x1478", ControlAction.SetSystem_Info);// 更新系统信息 无参数 格式：null
 ControlCodeMap.put("$.0x6325", ControlAction.UpdatePlanList);// 更新计划列表 无参数 格式：null
-ControlCodeMap.put("$.0xb974", ControlAction.SendMessageResult);// 给服务器发送消息之后的返回时 无参数 格式：null
 ControlCodeMap.put("$.0xc92a", ControlAction.UpdateMaxPlanListID);// 更新最新计划ID 无参数 格式：null
-ControlCodeMap.put("$.0x62ab", ControlAction.NewPlanExpression);// 新计划的设备表现 无参数 格式：null
-
-服务器发送消息格式
-[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'消息内容','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
+ControlCodeMap.put("$.0xb974", ControlAction.SendMessageResult);// 给服务器发送消息之后的返回时 无参数 格式：null
+ControlCodeMap.put("$.0x62ab", ControlAction.NewPlanExpression);// 收到新计划时设备的表现,振动+语音+亮屏 无参数 格式：null
 
 
-客户端发送消息格式
-#.0x1465 发送PDA基本信息
-#.0x7845 发送PDA_电量信息 
-#.0x4156 发送PDA_GPS信息
-#.0x8231 发送客户端获取到的最大计划ID
-#.0xc5b1 发送MESSAGE_Run执行结果   格式： MessageId|Message_Content
+客户端向服务器发送消息格式
+调用函数 
+1、使用消息json方式，基于MessageModel
+SignalR_Server_Method_GetMessage(JsonMessage)
+   
+2、简单方式，只接收一个字符串
+SignalR_Server_Method_GetMessage_Simple(string Message_Id, string Message_Type, string Message_Content)
+
+Message_Type说明：
+#.0x1465 发送PDA基本信息                   Message_Content格式：{'AppVersions':'3.3.9','LocomotiveId':'待机','Mac':'e2:eb:1f:98:11:19','PdaSn':'930118120119_PL-50L'}
+#.0x7845 发送PDA_电量信息                  Message_Content格式： ElectricQuantity，如：97%
+#.0x4156 发送PDA_GPS信息                   Message_Content格式： LastGpsInfo|LastSpeedValue，如：(39.4738975,110.0774|40)
+#.0x8231 发送客户端获取到的最大计划ID      Message_Content格式： MaxShuntingPlanId，如：100
+#.0xc5b1 发送MESSAGE_Run执行结果           Message_Content格式： MessageId|Message_Content，如：211|Success
+#.0x9108 根据计划单号回调计划确认接收时间  Message_Content格式： SpListId|ConfirmReceiptOperatorName，如：211|admin
 #.0xb874 发送byte压缩后的string文件
-#.0x9108 根据计划单号回调计划确认接收时间  Message_Content格式：SpListId|ConfirmReceiptOperatorName
-
-
-
- 
-
-
- 
