@@ -60,5 +60,5 @@ Message_Type说明：
 #.0x8231 发送客户端获取到的最大计划ID      Message_Content格式： MaxShuntingPlanId，如：100
 #.0xc5b1 发送MESSAGE_Run执行结果           Message_Content格式： MessageId|Message_Content，如：211|Success
 #.0x9108 根据计划单号回调计划确认接收时间  Message_Content格式： SpListId|ConfirmReceiptOperatorName，如：211|admin
-#.0x9se3 发送登陆者                      Message_Content格式： LocomotiveNum，如：9999
+#.0x9se3 发送登陆者信息                  Message_Content格式： LocomotiveNum，如：9999
 #.0xb874 发送byte压缩后的string文件
