@@ -71,5 +71,5 @@ Message_Type说明：
 #.0x9108 根据计划单号回调计划确认接收时间  Message_Content格式： SpListId|ConfirmReceiptOperatorName，如：8623|admin
 #.0x9se3 发送登陆者信息                    Message_Content格式： LocomotiveNum，如：9999
 #.0x6al2 发送某计划某勾完成时间            Message_Content格式： SpListId|DetailId，如：8623|90003
-#.0xkdx7 发送更新版本信息                  Message_Content格式： null
+#.0xkdx7 发送更新版本信息                  Message_Content格式： appVersion 如：4.0.0-debug
 #.0xb874 发送byte压缩后的string文件
