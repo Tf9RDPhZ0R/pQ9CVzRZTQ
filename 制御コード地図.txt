@@ -1,6 +1,7 @@
 服务器向客户端发送消息格式
-[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'消息内容','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
+jsonstr=[{'Message_Sender_Sn':'830317100501','Message_Receiver_Sn':'930118120119_PL-50L','Message_Receiver_Group_Id':'160023','Message_Level':'0','Message_Content':'消息内容','Message_Type':'$.0x3858','Message_Send_Time':'20190127220304','Message_Receive_Time':'20190127221304','Message_Status_Code':'0',}]
 
+////////////////////////////////////////////////////////////////////////////
 C# 调用实例
 JsonSystemInfo="消息内容，根据具体调用可以是字符串或者JSON"
 //创建数组
@@ -16,6 +17,11 @@ MessageModelArray[0] = new MessageModel()
 
 var jsondata = JsonConvert.SerializeObject(MessageModelArray);
 await SignalR_Server_Method_PushMessage(jsondata);
+
+////////////////////////////////////////////////////////////////////////////
+JS 调用实例：
+hubProxy.server.SIGNALR_SERVER_METHOD_PUSHMESSAGE(jsonstr);
+///////////////////////////////////////////////////////////////////////////
 
 
 Message_Type（控制码）说明：
@@ -52,6 +58,9 @@ SignalR_Server_Method_GetMessage(JsonMessage)
 2、简单方式，只接收一个字符串
 SignalR_Server_Method_GetMessage_Simple(string Message_Id, string Message_Type, string Message_Content)
 
+js调用方法：如：
+hubProxy.server.SIGNALR_SERVER_METHOD_GETMESSAGE_SIMPLE(001, "#.0xc5b1", 001|Success);
+      
 Message_Type说明：
 #.0x1465 发送PDA基本信息                   Message_Content格式：{'AppVersions':'3.3.9','LocomotiveId':'待机','Mac':'e2:eb:1f:98:11:19','PdaSn':'930118120119_PL-50L'}
 #.0x7845 发送PDA_电量信息                  Message_Content格式： ElectricQuantity，如：97%
