@@ -50,6 +50,9 @@ ControlCodeMap.put("$.0xb974", ControlAction.SendMessageResult);// 给服务器�
 ControlCodeMap.put("$.0x62ab", ControlAction.NewPlanExpression);// 收到新计划时设备的表现,振动+语音+亮屏 无参数 格式：null
 ControlCodeMap.put("$.0x92d2", ControlAction.UpdateLocomotiveNum);// 更新LocomotiveNum 无参数 格式：null
 ControlCodeMap.put("$.0x4622", ControlAction.GetUpdateInfo);// 获取更新信息 无参数 格式：null
+ControlCodeMap.put("$.0xkcq5", ControlAction.UpdateTroubleDescribe);// 上传故障或隐患描述 string参数 格式：故障或隐患ID|故障或隐患描述
+ControlCodeMap.put("$.0xpwn9", ControlAction.UpdateTroublePicture);// 上传故障或隐患图面 string参数 格式：故障或隐患ID|压缩后的图片byte64string
+        
 
 客户端向服务器发送消息格式
 调用函数 
