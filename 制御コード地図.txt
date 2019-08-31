@@ -72,4 +72,5 @@ Message_Type说明：
 #.0x9se3 发送登陆者信息                    Message_Content格式： LocomotiveNum，如：9999
 #.0x6al2 发送某计划某勾完成时间            Message_Content格式： SpListId|DetailId，如：8623|90003
 #.0xkdx7 发送更新版本信息                  Message_Content格式： appVersion 如：4.0.0-debug
-#.0xb874 发送byte压缩后的string文件
+#.0xb874 发送压缩后的byte64string文件      Message_Content格式： 类型|ID|压缩后的byte64string  （目前的类型有 ScreenShot、TroubleUpdate）
+#.0xq5a2 隐患故障上报                      Message_Content格式： 隐患ID|隐患描述
