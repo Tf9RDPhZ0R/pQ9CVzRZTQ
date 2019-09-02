@@ -80,3 +80,4 @@ Message_Type说明：
 #.0xb874 发送压缩后的byte64string文件      Message_Content格式： 类型|ID|压缩后的byte64string  （目前的类型有 ScreenShot、TroubleUpdate）
 #.0xq5a2 隐患故障上报                      Message_Content格式： 隐患ID|隐患描述
 #.0x4sd5 发送频道信息                      Message_Content格式： Chanel，如：5|2|-1
+#.0xe152 发送arm音频压缩后的byte64string   Message_Content格式： arm音频压缩后的byte64string
