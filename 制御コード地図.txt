@@ -54,7 +54,10 @@ ControlCodeMap.put("$.0xkcq5", ControlAction.UpdateTroubleDescribe);// 上传故
 ControlCodeMap.put("$.0xpwn9", ControlAction.UpdateTroublePicture);// 上传故障或隐患图面 string参数 格式：故障或隐患ID|压缩后的图片byte64string
 ControlCodeMap.put("$.0xbd6m", ControlAction.UpdateChannelNum);//上传对讲频道号 无参数 格式：null
 ControlCodeMap.put("$.0x6htz", ControlAction.SetPdaChanelNum);// 设置PDAChanelNum   格式：5|-1|-1
-        
+ControlCodeMap.put("$.0x7e9b", ControlAction.ReceiveAMRVoice);    // 接收amr对讲音频   string参数 格式：base64字符串
+ControlCodeMap.put("$.0pnxe4", ControlAction.ReSetMonitor);    // 重启推流服务   无参数 null
+ControlCodeMap.put("$.0x6325", ControlAction.ReflashPLOrIMList);// 更新计划列表 无参数 格式：null
+ControlCodeMap.put("$.0x8jl4", ControlAction.SendPDAInfo);// 服务器主动要求 上传状态 无参数 格式：null
 
 客户端向服务器发送消息格式
 调用函数 
